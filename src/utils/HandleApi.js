@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseurl = "http://localhost:5000/notes"
+const baseurl = "https://doozy-backend.onrender.com/notes"
 
 const getAllItems = (setNotes) => {
     axios
