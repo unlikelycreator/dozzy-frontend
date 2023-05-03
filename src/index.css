@@ -1,0 +1,224 @@
+/* Reset CSS */
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@600&family=Patrick+Hand+SC&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* App container */
+.App {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-container {
+  display: flex;
+  height: 100vh;
+  width: 150px;
+  flex-direction: column;
+  background-color: #000000;
+  color: white;
+  align-items: center;
+}
+
+.header {
+  margin-top: 20px;
+  padding: 10px;
+  font-family: 'Khand', sans-serif
+}
+
+.floating-button {
+  margin: auto;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: 'Khand', sans-serif
+}
+
+/* Main */
+main {
+  flex-grow: 1;
+  overflow-y: auto; /* add scrollbar when content overflows */
+  padding: 20px;
+  background-color: #000000;
+  color: white;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px;
+}
+
+/* Task cards */
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 40px;
+  font-family: 'Patrick Hand SC', cursive;
+}
+
+.task-card {
+  background-color: #1b1b1b;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  max-width: 400px;
+  min-height: 200px;
+  flex-grow: 1;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Patrick Hand SC', cursive;
+}
+
+.task-card:hover {
+  transform: scale(1.05);
+}
+
+.task-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.task-card p {
+  font-size: 16px;
+}
+
+
+
+.floating-button:hover {
+  transform: scale(1.1);
+}
+
+/* Modal */
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: 'Khand', sans-serif
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #4a4a4a;
+}
+
+option{
+  font-family: 'Khand', sans-serif
+}
+
+.modal input,
+.modal textarea {
+  border: none;
+  border-bottom: 2px solid #ddd;
+  padding: 5px;
+  font-size: 20px;
+  font-family: 'Khand', sans-serif
+}
+
+.modal input:focus,
+.modal textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #2979ff;
+}
+
+.modal select {
+  font-size: 1.2rem;
+  padding: 5px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+.modal button[type="submit"] {
+  background-color: #2979ff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  width: 100px;
+  font-family: 'Khand', sans-serif
+}
+
+.modal button[type="submit"]:hover {
+  background-color: #1863cc;
+  font-family: 'Khand', sans-serif
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.close-button:hover {
+  border: none;
+}
+.delete-button {
+  /* styles for delete button */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  cursor: pointer;
+}
